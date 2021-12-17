@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 class="text-center" id="head_style" >Product Details</h2>
+    <div class="row mt-4 mb-4 d-flex">
+        <div class="col-md-3 col-sm-12 ">
+            <div class="card mx-auto" style="width: 17rem;">
+                <img class=" img-thumbnail" [src]="productDatails.image" alt="Card image cap">
+                <div class="card-body">
+                <h6 class="card-title">{{productDatails.title}}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-12 text-center mx-auto d-flex justify-content-center align-items-center" >
+            <ul class="list-group list-group-flush w-75 mt-3">
+                <li class="list-group-item"><strong>Product Name</strong> : {{productDatails.title}} </li>
+                <li class="list-group-item"><strong>Category</strong> : {{productDatails.category}} </li>
+                <li class="list-group-item"><strong>Description</strong> : {{productDatails.description}}</li>
+                <li class="list-group-item"><strong>Rate </strong> : <ngb-rating [max]="5" [(rate)]="productDatails.rating.rate" [readonly]="false"></ngb-rating>( {{productDatails.rating.count}} ) </li>
+                <li class="list-group-item"><strong>Price</strong> : ${{productDatails.price}} </li>
+                <li class="list-group-item"><button (click)=addtoCart(productDatails) class="btn btn-warning" style="margin-right: 25px;"><i class="fas fa-cart-plus"></i></button><a routerLink="../" style="margin-right: 25px;" class="btn btn-outline-success"><i class="fas fa-backward"></i></a></li>
+              </ul>
+        </div>
+    </div>
+</div>
+

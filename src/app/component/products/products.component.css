@@ -1,0 +1,53 @@
+body {
+    background-color: #6200EA;
+    color: #000;
+    overflow-x: hidden;
+}
+
+.card {
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card .pic {
+    width: 90%;
+    height:350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.card .pic:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.category {
+    padding-top: 25px;
+    color: grey;
+}
+
+.price {
+    font-size: 18px;
+}
+div h5{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    max-width:100ch;
+}
+.description{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    max-width:500ch
+}
+
+ngb-rating {
+    color: #FFC107;
+    font-size: 18px;
+}
