@@ -1,0 +1,44 @@
+<header>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #053969;">
+            <div class="container-fluid ">
+            <a class="navbar-brand" href="./"><i class="fa fa-shopping-bag" style="font-size: 30px;"><strong> {{title}} </strong></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="./products">All Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/category/electronics">Electronics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/category/women's clothing">Women</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/category/men's clothing">Men</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/category/jewelery">jewelery</a>
+                </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-3" size="35" type="search" name="searchTerm" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm" (change)="search()">
+                    <button (click)="search()" class="btn btn-outline-info me-3" type="submit">Search</button>
+                    <a routerLink="./cart" type="button" class="btn position-relative cart-button">
+                        <i class="fas fa-shopping-cart cart"></i>
+                        <span class="position-absolute top-0 start-99 translate-middle badge rounded-pill bg-danger">
+                          {{totalCartItem}}
+                        </span>    
+                    </a>
+                </form>
+            </div>
+            </div>
+        </nav>
+    </div>
+</header>

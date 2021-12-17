@@ -1,0 +1,15 @@
+.cart{
+    color: white;
+    font-size: 25px;
+}
+.collapse ul li a{
+    color: white;
+    font-size: 18px;
+}
+.collapse ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.cart-button:hover{
+    border: 1px solid #ffffff;
+}

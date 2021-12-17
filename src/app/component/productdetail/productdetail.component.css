@@ -1,0 +1,9 @@
+#head_style{
+    text-decoration: underline;
+    color:blue;
+}
+
+li ngb-rating {
+    color: #FFC107;
+    font-size: 18px;
+}

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row mt-2">
+        <div *ngFor="let product of productList" class="card col-md-4 col-sm-6 mx-auto" style="width: 18rem;">
+            <img [src]="product.image" class=" pic card-img-top" alt="...">
+            <div class="card-body">
+                <small class="category">{{product.category}}</small>
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text description">{{product.description}}</p>
+            <div class="d-flex justify-content-between">
+                <p class="price">{{product.price | currency : 'USD' }}</p>
+                <ngb-rating [max]="5" [(rate)]="product.rating.rate" [readonly]="false"></ngb-rating>
+            </div>
+            <button (click)=addtoCart(product) class="btn btn-warning me-4 ms-5"><i class="fas fa-cart-plus"></i></button>
+            <a (click)="productDetial(product.id)" class="btn btn-primary">Viwe</a>
+            </div>
+        </div>
+    </div>  
+</div>
